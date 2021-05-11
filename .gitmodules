@@ -14,11 +14,11 @@
 	path = dependencies/assimp
 	url = https://github.com/natnat201193/assimp.git
 	branch = master
-[submodule "dependencies/stb"]
-	path = dependencies/stb
-	url = https://github.com/natnat201193/stb.git
-	branch = master
 [submodule "dependencies/imgui"]
 	path = dependencies/imgui
 	url = https://github.com/natnat201193/imgui.git
+	branch = master
+[submodule "dependencies/stb"]
+	path = dependencies/stb
+	url = https://github.com/natnat201193/stb.git
 	branch = master
