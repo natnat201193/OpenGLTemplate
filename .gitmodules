@@ -15,7 +15,7 @@
 	url = https://github.com/natnat201193/assimp.git
 	branch = master
 [submodule "dependencies/stb"]
-	path = dependenciess/stb
+	path = dependencies/stb
 	url = https://github.com/natnat201193/stb.git
 	branch = master
 [submodule "dependencies/imgui"]
