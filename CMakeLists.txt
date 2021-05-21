@@ -7,8 +7,10 @@ option(GLFW_BUILD_TESTS OFF)
 add_subdirectory(dependencies/glfw)
 
 # glad
-add_subdirectory("dependencies/glad/cmake" glad_cmake)
-glad_add_library(glad_gl_core_33 REPRODUCIBLE API gl:core=3.3)
+set(GLAD_SOURCES_DIR "${PROJECT_SOURCE_DIR}/dependencies/glad")
+add_subdirectory(${GLAD_SOURCES_DIR}/cmake)
+
+glad_add_library(glad REPRODUCIBLE MX LANGUAGE "c++" API gl:core=4.6 LOCATION ${CMAKE_CURRENT_BINARY_DIR}/dependencies/glad)
 
 option(ASSIMP_BUILD_ASSIMP_TOOLS OFF)
 option(ASSIMP_BUILD_SAMPLES OFF)
@@ -25,5 +27,5 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
 	assimp
-	glad_gl_core_mx_33
+	glad
 	glfw)
