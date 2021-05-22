@@ -4,17 +4,18 @@ project(OpenGLTemplate)
 option(GLFW_BUILD_DOCS OFF)
 option(GLFW_BUILD_EXAMPLES OFF)
 option(GLFW_BUILD_TESTS OFF)
+option(GLFW_INSTALL OFF)
 add_subdirectory(dependencies/glfw)
 
 # glad
-set(GLAD_SOURCES_DIR "${PROJECT_SOURCE_DIR}/dependencies/glad")
-add_subdirectory(${GLAD_SOURCES_DIR}/cmake)
+add_subdirectory(dependencies/glad/cmake)
 
 glad_add_library(glad REPRODUCIBLE MX LANGUAGE "c++" API gl:core=4.6 LOCATION ${CMAKE_CURRENT_BINARY_DIR}/dependencies/glad)
 
 option(ASSIMP_BUILD_ASSIMP_TOOLS OFF)
 option(ASSIMP_BUILD_SAMPLES OFF)
 option(ASSIMP_BUILD_TESTS OFF)
+OPTION(ASSIMP_INSTALL OFF)
 add_subdirectory(dependencies/assimp)
 
 include_directories(
