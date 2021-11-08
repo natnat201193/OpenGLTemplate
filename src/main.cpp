@@ -1,6 +1,3 @@
-#include <stb.h>
-#include <assimp/anim.h>
-#include <glm/common.hpp>
 #include <iostream>
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>

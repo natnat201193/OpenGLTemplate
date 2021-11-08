@@ -10,23 +10,13 @@ add_subdirectory(dependencies/glfw)
 # glad
 add_subdirectory(dependencies/glad/cmake)
 
-glad_add_library(glad REPRODUCIBLE MX LANGUAGE "c++" API gl:core=4.6 LOCATION ${CMAKE_CURRENT_BINARY_DIR}/dependencies/glad)
-
-option(ASSIMP_BUILD_ASSIMP_TOOLS OFF)
-option(ASSIMP_BUILD_SAMPLES OFF)
-option(ASSIMP_BUILD_TESTS OFF)
-OPTION(ASSIMP_INSTALL OFF)
-add_subdirectory(dependencies/assimp)
+glad_add_library(glad REPRODUCIBLE MX LANGUAGE "c++" API gl:core=4.6)
 
 include_directories(
-	dependencies/assimp/include/
-	dependencies/glfw/include/
-	dependencies/glm/
-	dependencies/stb/)
+	dependencies/glfw/include/)
 	
 add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
-	assimp
 	glad
 	glfw)
