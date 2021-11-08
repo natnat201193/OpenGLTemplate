@@ -4,7 +4,7 @@
 	branch = master
 [submodule "dependencies/glad"]
 	path = dependencies/glad
-	url = https://github.com/natnat201193/glad.git
+	url = https://github.com/Dav1dde/glad.git
 	branch = glad2
 [submodule "dependencies/glm"]
 	path = dependencies/glm
